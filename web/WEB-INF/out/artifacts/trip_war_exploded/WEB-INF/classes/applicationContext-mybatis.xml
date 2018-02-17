@@ -64,9 +64,9 @@
 	    </tx:attributes>  
 	</tx:advice> 
 	<!-- AOP 事务处理 结束 -->
-	
-    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">  
-         <property name="basePackage" value="cn.kgc.dao />
-    </bean>
-    
+
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="cn.kgc.dao"/>
+	</bean>
+
 </beans>

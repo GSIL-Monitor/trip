@@ -45,13 +45,15 @@
         <servlet-name>spring</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
-    <!--<listener>
+    <!--ContextLoaderListener：在web容器启动时，自动装配ApplicationContext的配置信息-->
+    <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>-->
+    </listener>
     <context-param>
         <param-name>log4jConfigLocation</param-name>
         <param-value>classpath:log4j.properties</param-value>
     </context-param>
+
     <listener>
         <listener-class>
             org.springframework.web.util.Log4jConfigListener
