@@ -16,7 +16,7 @@ public interface AdminService {
     int insertAdmin(Admin admin);
 
     //删除
-    int deleteAdmin(Admin admin);
+    int deleteAdmin(int aid);
 
     //修改
     int updateAdmin(Admin admin);

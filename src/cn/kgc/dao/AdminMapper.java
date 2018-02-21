@@ -21,7 +21,7 @@ public interface AdminMapper {
     int insertAdmin(Admin admin);
 
     //删除
-    int deleteAdmin(Admin admin);
+    int deleteAdmin(@Param("aid") int aid);
 
     //修改
     int updateAdmin(Admin admin);

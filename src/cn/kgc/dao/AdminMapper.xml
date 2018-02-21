@@ -6,4 +6,39 @@
     <select id="selectAll" resultType="Admin">
         SELECT * FROM admin;
     </select>
+
+    <select id="selectAdmin" resultType="Admin">
+        SELECT * FROM admin
+        <trim prefix="where">
+            <if test="aname != null and aname != ''">
+                aname=#{aname}
+            </if>
+            <if test="apwd != null and apwd != ''">
+                AND apwd=#{apwd}
+            </if>
+        </trim>
+    </select>
+
+    <insert id="insertAdmin" parameterType="Admin">
+        insert  into admin(aname,apwd) values (#{aname},#{apwd});
+    </insert>
+
+    <delete id="deleteAdmin">
+        DELETE from admin WHERE aid=#{aid};
+    </delete>
+
+    <update id="updateAdmin" parameterType="Admin">
+        update admin
+        <trim prefix="set" suffixOverrides=",">
+            <if test="#{aname}!=null and #{apwd}!=''">
+                aname = #{aname},
+            </if>
+            <if test="#{apwd}!=null and #{apwd}!=''">
+                apwd = #{apwd},
+            </if>
+        </trim>
+        where aid = #{aid};
+    </update>
+
+
 </mapper>
