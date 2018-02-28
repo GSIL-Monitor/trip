@@ -11,6 +11,6 @@
     <title>$Title$</title>
   </head>
   <body>
- trip2
+  <a href="/adminController/getAdminList?pageIndex=1">进入</a>
   </body>
 </html>

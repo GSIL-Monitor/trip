@@ -7,6 +7,10 @@
         SELECT * FROM admin;
     </select>
 
+    <select id="selectPage" resultType="Admin">
+        SELECT * FROM admin limit #{index},#{pageSize}
+    </select>
+
     <select id="selectAdmin" resultType="Admin">
         SELECT * FROM admin
         <trim prefix="where">
@@ -17,6 +21,10 @@
                 AND apwd=#{apwd}
             </if>
         </trim>
+    </select>
+
+    <select id="selectById" resultType="Admin">
+        SELECT * FROM admin WHERE aid=#{aid};
     </select>
 
     <insert id="insertAdmin" parameterType="Admin">

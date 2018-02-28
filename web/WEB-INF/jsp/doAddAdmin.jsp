@@ -11,6 +11,11 @@
     <title>doAddAdmin</title>
 </head>
 <body>
+<form action="/adminController/addAdmin" method="post">
+    管理员用户名：<input type="text" >
+    管理员密码：<input type="password">
+    <input type="submit" value="添加">
+</form>
 
 </body>
 </html>

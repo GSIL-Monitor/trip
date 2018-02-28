@@ -17,13 +17,22 @@ import java.util.List;
 @Service
 @RequestMapping("adminService")
 public class AdminServiceImpl implements AdminService{
-
     @Resource
     private AdminMapper adminMapper;
 
     @Override
+    public Admin selectById(Integer aid) {
+        return adminMapper.selectById(aid);
+    }
+
+    @Override
     public List<Admin> selectAll() {
         return adminMapper.selectAll();
+    }
+
+    @Override
+    public List<Admin> selectPage(int index, int pageSize) {
+        return adminMapper.selectPage(index,pageSize);
     }
 
     @Override

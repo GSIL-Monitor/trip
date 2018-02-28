@@ -11,6 +11,7 @@
     <title>error</title>
 </head>
 <body>
-error
+error${message}
+<a href=""></a>
 </body>
 </html>

@@ -3,5 +3,35 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.kgc.dao.HotelMapper">
+    <select id="selectAll" resultType="Hotel">
+        SELECT * FROM hotel;
+    </select>
 
+    <select id="selectPage" resultType="Hotel">
+        SELECT * FROM hotel limit #{index},#{pageSize};
+    </select>
+
+    <select id="selectByChoose" resultType="Hotel">
+        SELECT * FROM hotel AS h
+        <where>
+        <if test="htypes!=null">
+            h.htype IN
+            <foreach collection="htypes" item="htype" open="(" separator="," close=")">
+                    #{htype}
+            </foreach>
+             AND
+        </if>
+        <if test="hlevels!=null">
+            h.hlevel IN
+                <foreach collection="hlevels" item="hlevel" open="(" separator="," close=")">
+                     #{hlevel}
+                </foreach>
+            AND
+        </if>
+        <if test="hname!=null">
+            h.hname LIKE concat('%',#{hname},'%')
+        </if>
+        </where>
+       limit #{index},#{pageSize};
+    </select>
 </mapper>

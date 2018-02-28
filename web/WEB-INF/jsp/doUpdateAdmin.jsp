@@ -11,6 +11,11 @@
     <title>doUpdateAdmin</title>
 </head>
 <body>
-
+<form method="post" action="/adminController/updateAdmin">
+    管理员编号：<input type="text" readonly=readonly value="${admin.aid}">
+    管理员用户名：<input type="text" value="${admin.aname}">
+    管理员密码：<input type="password" value="${admin.apwd}">
+    <input type="submit" value="更新">
+</form>
 </body>
 </html>
