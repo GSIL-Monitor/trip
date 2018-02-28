@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HotelController {
     @RequestMapping("face")
 public String test(){
-
+ String is="";
 
     return "show";
 }
