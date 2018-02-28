@@ -1,0 +1,101 @@
+@charset "utf-8";
+.cui_hd, .cui_nav {width: 980px;}
+#cui_nav_cruise, li.divider_spec, #cui_nav_cruise_skysea {display: none;}
+.cui_nav li a.cui_nav_has,
+.cui_nav li a.cui_nav_non {
+    padding:0 5px;
+}
+.cui_sub_nav li {margin: 0 4px;}
+#cui_nav_g .cui_sub_nav {padding-left: 508px;}
+#cui_nav_more .cui_sub_nav {padding-left: 701px;}
+
+/*index footer*/
+.cui_footer .ft_guide {width: 980px;}
+.cui_footer .ft_guide dl {padding: 0 30px 0 66px;}
+.cui_footer .ft_guide .travel_info {
+    padding-left: 50px;
+    padding-right: 0;
+}
+.cui_footer .ft_guide .about_ctrip {padding-right: 20px;}
+.cui_footer .ft_guide .ft_lang {
+    padding-left: 25px;
+    width: 180px;
+}
+.cui_footer .ft_guide .ft_lang dd { margin: 0 0 8px 6px;}
+.mod.footer .footer-item {width:155px;padding: 0 10px 0 15px;}
+.mod.footer .ft-link-item{width:77px;}
+.mod.footer .join_in{width:180px;}
+.mod.footer .join_in .ft-link-item{width:90px;}
+.mod.footer .wechat_code{width:130px;}
+.mod.footer .wechat_code .ft-link-item{width:114px;}
+.mod.footer .advantage {width: 245px; padding: 0;}
+.mod.footer .ft_lang {
+    width: 980px;
+    height: auto;
+    margin: 20px auto 0;
+    border-left: none;
+    text-align: center;
+}
+.mod.footer .ft_lang .ft-link-item {
+    width: auto;
+    float: none;
+}
+.mod.footer .ft-link-item_drop .dropdown-cont{
+    right: 9px;
+}
+
+/*mod browser*/
+.bow-history .scrolling-wrap,.bow-history .list-wrap{width:980px;}
+
+/*product*/
+.extra-item{display:none;}
+.hotel-homestay .extra-item{
+    display: block;
+    right: 20px;
+}
+.hotel-homestay  .homestay-product{
+    display: none;
+}
+.entrance{width:197px}
+
+/*980 entrance*/
+.tmh .product,.hotel .product,.car .product,.play .product,.buy .product,.guide .product{margin-left:239px;}
+.tmh .mod-bd-panel_tmh .product{margin-left:0;}
+.product-item{margin:0 0 10px 20px;}
+.mod.flightC .product-item{margin-right:20px;}
+.mod.tmh .product-item,.mod.hotel .product-item{margin-right:20px;}
+.mod.hotel .product-item_complex{margin-bottom:20px;height:155px;}
+.mod.tmh .inner-tab-panel_noextra{margin-left:-20px;}
+.mod.tmh .inner-tab-panel_noextra .product-item{margin:0 0 10px 20px;}
+.inner-tab-panel{margin:0 -20px;padding-right:0;}
+.hotel-internal .inner-tab-panel{margin:0 -20px 0 0;}
+.car .inner-tab-panel,.play .inner-tab-panel,.buy .inner-tab-panel,.guide .inner-tab-panel{height:162px;overflow:hidden;}
+
+/*product flight*/
+.flight .product{margin-left:720px;border-left:none;padding:0;}
+.calender{float:left;width:700px;height:360px;overflow:hidden;}
+.calender-tabs-date-wrap,.calender-date-panel,.theme-img,.theme-img img{width:700px;}
+.month{margin-right:-15px;}
+.month li{margin-right:15px;}
+.mod-bd-panel_flightB .product-item,.mod-bd-panel_flightC .product-item{margin-bottom:15px;}
+
+/*guide*/
+.supply-box{width:318px;overflow:hidden;}
+.col-4 .supply-item{width:106px;}
+.col-3 .supply-item{width:159px;}
+.supply-img{width:85px;}
+.supply-cont{margin-left:95px;}
+
+/*guide*/
+.car .product-bd,.play .product-bd,.buy .product-bd,.guide .product-bd{margin-left:-20px;}
+
+/*partner*/
+.partner .part-bd li{width:120px;}
+
+/*bottom ads*/
+.mod-ads{overflow:hidden;}
+.ads_uma{margin-left:-100px;overflow:hidden;}
+
+/*窄屏电电梯楼层*/
+.lift{margin-left:-540px;}
+.hotel-homestay .inner-tab-panel{padding-right: 220px;}

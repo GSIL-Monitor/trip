@@ -45,6 +45,17 @@
         <servlet-name>spring</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.css</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/static/*</url-pattern>
+    </servlet-mapping>
+
+
     <!--ContextLoaderListener：在web容器启动时，自动装配ApplicationContext的配置信息-->
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>

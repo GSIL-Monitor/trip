@@ -1,0 +1,1 @@
+cQuery.jsonpResponse={"key":"","data":"@"};

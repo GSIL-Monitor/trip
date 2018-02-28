@@ -1,6 +1,16 @@
 package cn.kgc.controller;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller()
+@RequestMapping("shows")
 public class HotelController {
-public void test(){}
+    @RequestMapping("face")
+public String test(){
+
+
+    return "show";
+}
 
 }

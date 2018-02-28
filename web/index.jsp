@@ -11,6 +11,6 @@
     <title>$Title$</title>
   </head>
   <body>
- trip2
+<a href="/shows/face" >enter</a>
   </body>
 </html>
