@@ -1,7 +1,35 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
 <mapper namespace="cn.kgc.dao.UserMapper">
+
+    <!--全查-->
+    <select id="selectUser" resultType="User">
+        select * from user
+
+    </select>
+
+    <!--注册-->
+    <insert id="insertUser" parameterType="User">
+      INSERT into user (uname,upwd,uphone) VALUES (#{uname},#{upwd},#{uphone})
+    </insert>
+
+    <!--修改密码-->
+    <update id="updateUser" parameterType="User">
+        update user
+        <set>
+            <if test="upwd!=null">
+                upwd=#{upwd}
+            </if>
+        </set>
+        where uname=#{uname}
+    </update>
+
+    <!--根据用户查询电话-->
+    <select id="selectUphone" resultType="User">
+        select u.uphone from user u where uname=#{uname}
+    </select>
 
 </mapper>

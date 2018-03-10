@@ -1,7 +1,76 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
 <mapper namespace="cn.kgc.dao.RoomMapper">
+
+
+    <resultMap id="roomBean" type="Room">
+        <id property="rid" column="rid"/>
+        <result property="hid" column="hid"/>
+        <result property="Id" column="Id"/>
+        <result property="rtype" column="rtype"/>
+        <result property="rprize" column="rprize"/>
+        <result property="rnet" column="rnet"/>
+        <result property="rstate" column="rstate"/>
+        <result property="rcount" column="rcount"/>
+        <!--一对多关系-->
+        <!--property指的是集合属性的值即实体类内的 ofType指的是集合元素中的类型-->
+        <collection property="hotels" ofType="Hotel">
+            <id property="hid" column="hid"/>
+            <result property="hname" column="hname"/>
+            <result property="htype" column="htype"/>
+            <result property="hlevel" column="hlevel"/>
+            <result property="hcount" column="hcount"/>
+        </collection>
+    </resultMap>
+
+    <!--各种查询集合-->
+    <!--<select id="selectRoom" resultMap="roomBean">
+        select * from  room r left join hotel h on r.hid=h.hid
+        <where>
+            /*只有第一个可以不写and而且and不能大写*/
+            <if test="hid!=null">
+                r.hid in
+                <foreach item="hid" collection="hid" open="(" close=")" separator=",">
+                    #{hid}
+                </foreach>
+            </if>
+            <if test="r.rtype!=null">
+                and rtype in
+                /*#{rtype}要与item一样*/
+                <foreach item="rtype" collection="rtype" open="(" close=")" separator=",">
+                    #{rtype}
+                </foreach>
+            </if>
+            <if test="rnet!=null">
+                and rnet=#{rnet}
+            </if>
+        </where>
+    </select>-->
+
+    <select id="selectRoom" resultMap="roomBean">
+        select * from  room r left join hotel h on r.hid=h.hid
+        <where>
+            <if test="hid1!=null and hid1!=''">
+                r.hid in
+                <foreach item="hid1" collection="hid1" open="(" close=")" separator=",">
+                    #{hid1}
+                </foreach>
+            </if>
+            <if test="rtype1!=null and rtype1!=''">
+                and  r.rtype in
+                <foreach item="rtype1" collection="rtype1" open="(" close=")" separator=",">
+                    #{rtype1}
+                </foreach>
+            </if>
+            <if test="rnet!=null">
+                and r.rnet=#{rnet}
+            </if>
+
+        </where>
+    </select>
+
 
 </mapper>

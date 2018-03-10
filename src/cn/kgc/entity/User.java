@@ -8,11 +8,10 @@ import java.io.Serializable;
  * 用户类
  */
 public class User implements Serializable{
-
     private int uid;
     private String uname;
     private String upwd;
-    private int uphone;
+    private String uphone;
 
     public int getUid() {
         return uid;
@@ -38,21 +37,11 @@ public class User implements Serializable{
         this.upwd = upwd;
     }
 
-    public int getUphone() {
+    public String getUphone() {
         return uphone;
     }
 
-    public void setUphone(int uphone) {
+    public void setUphone(String uphone) {
         this.uphone = uphone;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "uid=" + uid +
-                ", uname='" + uname + '\'' +
-                ", upwd='" + upwd + '\'' +
-                ", uphone=" + uphone +
-                '}';
     }
 }

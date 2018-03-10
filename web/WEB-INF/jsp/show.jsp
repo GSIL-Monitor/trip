@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
@@ -6,6 +7,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <!DOCTYPE html>
 <!-- saved from url=(0051)http://www.ctrip.com/?allianceid=761445&sid=1336319 -->
 <html><head>
@@ -13,7 +15,7 @@
     <script type="text/javascript" charset="gb2312" async="" src="../../static/js/AjaxDestination.aspx"></script>
     <script src="../../static/js/push.js"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
-    <script type="text/javascript" async="" src="../../static/static/js/rt.js"></script>
+    <script type="text/javascript" async="" src="../../static/js/rt.js"></script>
     <script type="text/javascript" async="" src="../../static/js/s.js"></script>
     <script type="text/javascript" async="" src="../../static/js/mba_ctrip.js"></script>
     <script type="text/javascript" async="" src="../../static/js/conv.js"></script>
@@ -391,11 +393,11 @@
                 </ul>
             </div>
             </li>
-            <li id="loginDivLi" class="cui_nav_myctrip cui_content" onmousemove="showLogin()" onmouseout="hideLogin()">
+           <c:if test="${er==null}"> <li id="loginDivLi" class="cui_nav_myctrip cui_content" onmousemove="showLogin()" onmouseout="hideLogin()">
 
                 <ul class="cui_myctrip_log" id="ulCTMinMC">
                     <!--要修改 id="div_User"-->
-                    <li class="userLogin" id="div_User"><a  id="c_ph_login" class="cui_links_login" href="javascript:void(0);">登录</a><span>|</span><a  id="c_ph_register" href="javascript:void(0);" class="cui_links_reg">注册</a></li>
+                    <li class="userLogin" id="div_User"><a  id="c_ph_login" class="cui_links_login" href="/index/goLogin">登录</a><span>|</span><a  id="c_ph_register" href="/index/goRegister" class="cui_links_reg">注册</a></li>
                     <li class="myctrip" style="margin-top:0;clear:left;"><span id="div_MyCtrip"><a  id="c_ph_myhome" href="javascript:void(0);" class="cui_myctrip_status">我的携程<b class="arrow"></b></a></span>
                         <ul class="cui_account cui_account_login" id="login" style="display: none" onmouseout="hideLogin()">
                             <li>
@@ -409,7 +411,11 @@
                     </li>
                     <li class="message" id="div_MyCTMessages"></li>
                 </ul>
-            </li>
+           </li></c:if>
+               <c:if test="${er!=null}">
+                   ${er},你好
+
+               </c:if>
         </ul>
     </div>
     <div id="nav_bh" class="cui_nav_behind" style="display:none;height:0px;"></div>
@@ -590,9 +596,9 @@
                 <a href="javascript:void(0);" onclick="showMeeting_entry_form()">会议&#8226;团房&#8226;长住</a>
             </p>
             <!-- 国内酒店 --><!-- 国内酒店 html -->
-            <form id="chinaHotelForm" method="post" name="chinaHotelForm" action="javascript:void(0);" style="display: block;">
+            <form id="chinaHotelForm" method="post" name="chinaHotelForm" action="/hotelController/searchs" style="display: block;" >
                 <div class="s_item_cont">
-                    <div class="s_item w100">目的地<input type="text" class="w01 inputSel" name="CityName" id="HD_CityName" autocomplete="on" _cqnotice="中文/拼音">
+                    <div class="s_item w100">目的地<input type="text" class="w01 inputSel" name="city" id="HD_CityName" autocomplete="on" _cqnotice="中文/拼音">
                         <input type="hidden" id="HD_CityId" name="cityId" value="" _lastvalue="">
                         <input type="hidden" id="HD_CityPy" name="cityPY" value="">
                     </div>
@@ -602,12 +608,12 @@
                     </div>
                 </div>
                 <div class="s_item_cont">
-                    <div class="s_item">入住日期<input type="text" value="yyyy-mm-dd" name="checkIn" id="HD_CheckIn" autocomplete="off" _cqnotice="yyyy-mm-dd"></div>
+                    <div class="s_item">入住日期<input  type="text" value="yyyy-mm-dd" name="checkIn" id="HD_CheckIn" autocomplete="off" _cqnotice="yyyy-mm-dd"></div>
                     <div class="s_item2">退房日期<input class="w170" type="text" value="yyyy-mm-dd" name="checkOut" id="HD_CheckOut" autocomplete="off" _cqnotice="yyyy-mm-dd"></div>
                 </div>
                 <div class="s_item_cont">
                     <div class="s_item">房间数
-                        <select id="J_roomCountList">
+                        <select id="J_roomCountList" name="count">
                             <option selected="selected" value="1">1间</option>
                             <option value="2">2间</option>
                             <option value="3">3间</option>
@@ -621,7 +627,7 @@
                     </div>
                     <div class="s_item2">住客数
                         <div id="J_RoomGuestInfoDiv" class="n_gst38578 J_cildNumBox n_gst38578_active">
-                            <input id="J_RoomGuestInfoTxt" type="text" value="1" class="w170">
+                            <input id="J_RoomGuestInfoTxt" type="text" value="1" class="w170" name="many">
                             <!-- 住客数浮层 -->
                         </div>
                     </div>
@@ -629,7 +635,7 @@
                 <input type="hidden" name="RoomGuestCount" id="J_RoomGuestCount" value="1,1,0">
                 <div class="s_item_cont">
                     <div class="s_item">酒店级别<select id="searchHotelLevelSelect" name="Star">
-                        <option selected="selected" value="0">不限</option>
+                        <option selected="selected" value="1" name="level" >不限</option>
                         <option value="5">五星级/豪华</option>
                         <option value="4">四星级/高档</option>
                         <option value="3">三星级/舒适</option>
@@ -637,7 +643,7 @@
                     </select>
                     </div>
                     <div id="hotelAddressDiv" class="s_item2">关键词
-                        <input type="text" _cqnotice="(选填)酒店名/地标/商圈" id="HD_TxtKeyword" name="keywordNew" class="w170 inputSel" autocomplete="on" maxlength="50">
+                        <input  type="text" _cqnotice="(选填)酒店名/地标/商圈" id="HD_TxtKeyword" name="name" class="w170 inputSel" autocomplete="on" maxlength="50">
                         <input type="hidden" id="hotelAreaName" name="keyword" value="">
                         <input type="hidden" id="positionArea" name="positionArea">
                         <input type="hidden" id="positionId" name="positionId">
@@ -650,7 +656,7 @@
                     </div>
                 </div>
                 <div class="s_button_area">
-                    <input type="submit" value="搜索" title="搜索" style="color: white;background-color: #ffb002;height: 33px;width: 145px;border: 0 none;border-radius: 4px;cursor:pointer;font-size: 18px">
+                    <input type="submit" value="搜索" title="搜索" style="color: white;background-color: #ffb002;height: 33px;width: 145px;border: 0 none;border-radius: 4px;cursor:pointer;font-size: 18px" >
                 </div>
             </form>
             <!-- 国际酒店 --><!--海外酒店20150421V2-->

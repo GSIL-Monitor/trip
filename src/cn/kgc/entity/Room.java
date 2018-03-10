@@ -1,6 +1,7 @@
 package cn.kgc.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * @author YJM
@@ -17,6 +18,35 @@ public class Room implements Serializable {
     private int rnet;//是否有宽带
     private int rstate;//状态
     private int rcount;//是否特价
+    //使用一个list来表示酒店
+    private List<Hotel> hotels;
+    private List<String> hid1;
+    private List<String> rtype1;
+
+    public List<Hotel> getHotels() {
+        return hotels;
+    }
+
+    public void setHotels(List<Hotel> hotels) {
+        this.hotels = hotels;
+    }
+
+    public List<String> getHid1() {
+        return hid1;
+    }
+
+    public void setHid1(List<String> hid1) {
+        this.hid1 = hid1;
+    }
+
+    public List<String> getRtype1() {
+        return rtype1;
+    }
+
+    public void setRtype1(List<String> rtype1) {
+        this.rtype1 = rtype1;
+    }
+
 
     public int getId() {
         return Id;
@@ -93,6 +123,9 @@ public class Room implements Serializable {
                 ", rnet=" + rnet +
                 ", rstate=" + rstate +
                 ", rcount=" + rcount +
+                ", hotels=" + hotels +
+                ", hid1=" + hid1 +
+                ", rtype1=" + rtype1 +
                 '}';
     }
 }

@@ -48,7 +48,7 @@
 .cui_search button,
 .cui_hd .language b.arrow,
 .cui_service b.arrow {
-    background-image: url(/images/un_header_footer20160610.png);
+    background-image: url(//pic.c-ctrip.com/platform/online/home/un_header_footer20160610.png);
     background-repeat: no-repeat;
 }
 .cui_wireless .wireless,
@@ -57,11 +57,11 @@
 .cui_wireless_code,
 .cui_link_app i,
 .cui_input_close {
-    background: url(/images/un_wireless_140722.png) 0 -9999em no-repeat;
+    background: url(//pic.c-ctrip.com/common/un_wireless_140722.png) 0 -9999em no-repeat;
 }
 /* search list diamonds */
 .cui_diamond01, .cui_diamond02, .cui_diamond03, .cui_diamond04, .cui_diamond05, .cui_diamond06, .cui_diamond01_half, .cui_diamond02_half, .cui_diamond03_half, .cui_diamond04_half, .cui_diamond05_half, .cui_diamond06_half, .cui_star01, .cui_star02, .cui_star03, .cui_star04, .cui_star05 {
-    background-image: url(/images/un_search.png);
+    background-image: url(//pic.c-ctrip.com/platform/online/home/un_search.png);
     background-repeat: no-repeat;
 }
 .cui_diamond01, .cui_diamond02, .cui_diamond03, .cui_diamond04, .cui_diamond05, .cui_diamond06, .cui_diamond01_half, .cui_diamond02_half, .cui_diamond03_half, .cui_diamond04_half, .cui_diamond05_half, .cui_diamond06_half, .cui_star01, .cui_star02, .cui_star03, .cui_star04, .cui_star05 {
@@ -125,7 +125,7 @@
 .cui-icon-standby,
 .cui-icon-foreign {
     display: inline-block;
-    background-image: url(/images/un_icon_index_type20170111.png);
+    background-image: url(//pic.c-ctrip.com/platform/online/home/un_icon_index_type20170111.png);
     background-repeat: no-repeat;
     width: 16px;
     height: 16px;
@@ -169,7 +169,7 @@
 .cui_ico_app{height: 17px;background-position:0  -56px;}
 .active .cui_ico_app,.active .cui_ico_app:hover,.cui_ico_app:hover{background-position:0  -78px;}
 .cui_ico_wechat{height:17px;background-position: -20px -55px;margin-top: 0;}
-.cui_ico_wechat_gif{background:url(/images/ico_wechat.png) no-repeat 0 0;
+.cui_ico_wechat_gif{background:url(//pic.c-ctrip.com/platform/online/home/ico_wechat.png) no-repeat 0 0;
 -webkit-animation: wechat 2s ease-out 1s  5 ;
 -o-animation: wechat 2s ease-out 1s  5 ;
 animation: wechat 2s ease-out 1s  5 ;
@@ -192,7 +192,7 @@ animation: wechat 2s ease-out 1s  5 ;
 }
 
 .active .cui_ico_wechat,.active .cui_ico_wechat:hover,.cui_ico_wechat:hover,
-.active .cui_ico_wechat_gif,.active .cui_ico_wechat_gif:hover,.cui_ico_wechat_gif:hover{height:17px;background:url(/images/ico_wechat.png) no-repeat 0 0;margin-top: 0;}
+.active .cui_ico_wechat_gif,.active .cui_ico_wechat_gif:hover,.cui_ico_wechat_gif:hover{height:17px;background:url(//pic.c-ctrip.com/platform/online/home/ico_wechat.png) no-repeat 0 0;margin-top: 0;}
 .cui_ico_chatarrow{
     width: 13px;
     height: 9px;
@@ -228,7 +228,7 @@ animation: wechat 2s ease-out 1s  5 ;
     display: block;
     width: 126px;
     height: 43px;
-    background: url(/images/c_logo2013.png) no-repeat;
+    background: url(//pic.c-ctrip.com/common/c_logo2013.png) no-repeat;
     text-indent: -999px;
     overflow: hidden;
 }
@@ -264,7 +264,7 @@ animation: wechat 2s ease-out 1s  5 ;
     width: 1180px;
     height: 65px;
     margin: -65px auto 0;
-    background: url(/images/pic_doodle_disny.jpg) 0 0 no-repeat;
+    background: url(//pic.c-ctrip.com/platform/online/home/pic_doodle_disny.jpg) 0 0 no-repeat;
 }
 /* cui_search */
 .cui_hd .cui_search {
@@ -416,7 +416,7 @@ animation: wechat 2s ease-out 1s  5 ;
     margin-right: 5px;
     vertical-align: -6px;
     *vertical-align: 0;
-    background-image: url(/images/un_search.png);
+    background-image: url(//pic.c-ctrip.com/platform/online/home/un_search.png);
     background-repeat: no-repeat;
     padding: 0;
 }
@@ -728,7 +728,7 @@ animation: wechat 2s ease-out 1s  5 ;
     border-bottom: none;
 }
 .cui_hd .language_list li a {
-    background-image: url(/images/un_header_language.png);
+    background-image: url(//pic.c-ctrip.com/platform/online/home/un_header_language.png);
     background-repeat:no-repeat;
     white-space: nowrap;
     display: block;
@@ -1087,7 +1087,7 @@ animation: wechat 2s ease-out 1s  5 ;
     padding: 0;
     width: 197px;
     height: 59px;
-    background:url(/images/un_wireless_140722.png)  0 -224px no-repeat;
+    background:url(//pic.c-ctrip.com/common/un_wireless_140722.png)  0 -224px no-repeat;
 }
 .cncorp_hd .cui_wireless a.wireless i {
     top: auto;
@@ -1484,7 +1484,7 @@ li.cui_nav_myctrip {
     width: 128px;
     height: 40px;
     padding: 0 5px 0 27px;
-    background: #ff9913 url(/images/un_header_footer20160610.png) no-repeat -59px -179px;
+    background: #ff9913 url(//pic.c-ctrip.com/platform/online/home/un_header_footer20160610.png) no-repeat -59px -179px;
     color: #fff;
 }
 /*myctrip common*/
@@ -1641,7 +1641,7 @@ li.cui_nav_myctrip {
     white-space: normal;
 }
 #base_ft .icon-gns,.mod .icon-gns, #base_ft .honour_wrap a, .honour_wrap a, .honour_wrap span,.footer .icon-code-wechat{
-    background-image: url(/images/phone_list20180116.png);
+    background-image: url(//pic.c-ctrip.com/platform/online/home/phone_list20180116.png);
     background-color: #fff;
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -1804,7 +1804,7 @@ li.cui_nav_myctrip {
     display: inline-block;
     width: 36px;
     height: 36px;
-    background-image: url(/images/pic_partner.png);
+    background-image: url(//pic.c-ctrip.com/platform/online/home/pic_partner.png);
     background-repeat: no-repeat;
 }
 .mod.footer .advan-img .icon-price {

@@ -1,0 +1,374 @@
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, em, button { margin:0; padding:0; }
+html { background-color:#FFF; }
+body { background-color:#FFF; font-size:12px; line-height:1.5; font-family:Tahoma,Simsun,sans-serif; color:#333; }
+img, fieldset { margin:0; padding:0; border:0; }
+input, textarea { font-size:12px; }
+table { border-collapse:collapse; }
+a { color:#06c; text-decoration:none; outline:none; }
+a:hover { text-decoration:underline; }
+h1, h2, h3, h4, h5 { font-family:Arial,Simsun,sans-serif; font-size:100%; }
+ul li, ol li { list-style:none; }
+dfn { font:normal 12px Arial; }
+section { display:block; }
+.layoutfix { display:inline-block; }
+.layoutfix { display:block; overflow:hidden; }
+.basefix { *zoom:1; }
+.basefix:after { clear:both; content:'.'; display:block; height:0; overflow:hidden; }
+.base_warning { color:#d81921; font:normal 12px Simsun; }
+.float_left { float:left !important; }
+.float_right { float:right !important; }
+.base_txtgray { color:#999; }
+.invisible { visibility:hidden !important; }
+.hidden { display:none !important; }
+
+/*=s stars & diamonds */
+.hotel_diamond01,
+.hotel_diamond02,
+.hotel_diamond03,
+.hotel_diamond04,
+.hotel_diamond05,
+.hotel_diamond06,
+.hotel_halfdiamond01,
+.hotel_halfdiamond02,
+.hotel_halfdiamond03,
+.hotel_halfdiamond04,
+.hotel_halfdiamond05,
+.hotel_halfdiamond06,
+.hotel_stars01,
+.hotel_stars02,
+.hotel_stars03,
+.hotel_stars04,
+.hotel_stars05{display:inline-block;background:url(//pic.c-ctrip.com/hotelcommon/icon_hotel4.png) no-repeat;overflow:hidden;vertical-align:middle;}
+
+.hotel_stars01,
+.hotel_stars02,
+.hotel_stars03,
+.hotel_stars04,
+.hotel_stars05{height:16px;background-position:0 -10px;}
+.hotel_stars01{width:12px;}
+.hotel_stars02{width:24px;}
+.hotel_stars03{width:36px;}
+.hotel_stars04{width:48px;}
+.hotel_stars05{width:60px;}
+
+.hotel_diamond01,
+.hotel_diamond02,
+.hotel_diamond03,
+.hotel_diamond04,
+.hotel_diamond05,
+.hotel_diamond06,
+.hotel_halfdiamond01,
+.hotel_halfdiamond02,
+.hotel_halfdiamond03,
+.hotel_halfdiamond04,
+.hotel_halfdiamond05,
+.hotel_halfdiamond06{height:12px;}
+.hotel_diamond01, .hotel_halfdiamond01{width:11px;}
+.hotel_diamond02, .hotel_halfdiamond02{width:23px;}
+.hotel_diamond03, .hotel_halfdiamond03{width:35px;}
+.hotel_diamond04, .hotel_halfdiamond04{width:47px;}
+.hotel_diamond05, .hotel_halfdiamond05{width:59px;}
+.hotel_diamond06, .hotel_halfdiamond06{width:71px;}
+.hotel_diamond01,
+.hotel_diamond02,
+.hotel_diamond03,
+.hotel_diamond04,
+.hotel_diamond05,
+.hotel_diamond06{background-position:0 3px;}
+.hotel_halfdiamond01{background-position:-72px 3px;}
+.hotel_halfdiamond02{background-position:-60px 3px;}
+.hotel_halfdiamond03{background-position:-48px 3px;}
+.hotel_halfdiamond04{background-position:-36px 3px;}
+.hotel_halfdiamond05{background-position:-24px 3px;}
+.hotel_halfdiamond06{background-position:-12px 3px;}
+/*=e stars & diamonds */
+
+.ico_shopping,
+.ico_shopping_hover,
+.ico_restaurant,
+.ico_restaurant_hover,
+.ico_entertainment,
+.ico_entertainment_hover,
+.ico_nearby_htl,
+.ico_nearby_htl_hover,
+.ico_airport,
+.ico_airport_hover,
+.ico_sight,
+.ico_sight_hover,
+.ico_metro,
+.ico_metro_hover,
+.ico_train,
+.ico_train_hover,
+.ico_college,
+.ico_college_hover,
+.ico_hospital,
+.ico_hospital_hover { display:block; width:22px; height:26px; background:url(//pic.c-ctrip.com/hotels_map/ico_spot.png) no-repeat; }
+
+.ico_shopping { background-position:0 0; }
+.ico_shopping_hover { background-position:-24px 0; }
+.ico_restaurant{ background-position:0 -28px; }
+.ico_restaurant_hover { background-position:-24px -28px; }
+.ico_entertainment { background-position:0 -56px; }
+.ico_entertainment_hover { background-position:-24px -56px; }
+.ico_nearby_htl { background-position:0 -84px; }
+.ico_nearby_htl_hover { background-position:-24px -84px; }
+.ico_airport { background-position:0 -112px; }
+.ico_airport_hover { background-position:-24px -112px; }
+.ico_sight { background-position:0 -140px; }
+.ico_sight_hover { background-position:-24px -140px; }
+.ico_metro { background-position:0 -168px; } 
+.ico_metro_hover { background-position:-24px -168px; }
+.ico_train { background-position:0 -196px; }
+.ico_train_hover { background-position:-24px -196px; }
+.ico_college { background-position:0 -224px; } 
+.ico_college_hover { background-position:-24px -224px; }
+.ico_hospital { background-position:0 -252px; }
+.ico_hospital_hover { background-position:-24px -252px; }
+
+.htl_spot { border:1px solid #fff; border-radius:4px; white-space:nowrap; }
+.htl_spot .spot_border { padding-right:8px; border:2px solid #2E91DE; border-radius:4px; background-color:#fff; cursor:pointer; }
+.htl_spot table { whitie-space:no-wrap; }
+.htl_spot .num { display:block; width:18px; height:22px; margin:-2px 0; border-right:2px solid #2E91DE; border-radius:0 4px 4px 0; color:#2E91DE; text-align:center; line-height:22px; font-family:tahoma; font-weight:bold; }
+.htl_spot .name { display:block; width:48px; padding-left:8px; color:#2E91DE; overflow:hidden; white-space:nowrap; *zoom:1; }
+.htl_spot .price { padding-left:8px; color:#FF7A17; font-weight:bold; white-space:nowrap; *zoom:1; }
+.htl_spot .price dfn { color:#333; font-weight:normal; white-space:nowrap; *zoom:1; }
+.htl_spot .price var { white-space:nowrap; *zoom:1; }
+.htl_spot_box .arrow { display:block; width:12px; height:7px; margin:-1px 0 0 6px; overflow:hidden; background:url(//pic.c-ctrip.com/hotels121118/bg_spot_arrow.png) no-repeat; }
+.htl_spot_hover .spot_border { background-color:#2E91DE; cursor:default; }
+.htl_spot_hover .num, .htl_spot_hover .name, .htl_spot_hover .price, .htl_spot_hover .price dfn  { color:#fff; }
+.other_spot{white-space:nowrap;}
+.other_spot td { vertical-align:top; }
+.other_spot .blue_name, .other_spot .red_name { display:inline-block; margin-left:8px; padding:4px 8px; border-radius:5px; background-color:#fff; white-space:nowrap; *zoom:1; }
+.other_spot .blue_name { border:2px solid #2E91DE; color:#06c; }
+.other_spot .red_name { border:2px solid #EE5B78; color:#A44343; }
+.ico_spot { display:block; width:15px; height:31px; background:url(//pic.c-ctrip.com/hotels110127/ico_map2.gif) no-repeat; }
+.ico_htl_c { display:block; width:21px; height:31px; background:url(//pic.c-ctrip.com/hotels110127/hotel_pointer.png) no-repeat; }
+
+/*--- mark pop ---*/
+.map_mark{padding-left:33px;padding-top:3px;height:40px;overflow:hidden;cursor:pointer;white-space:nowrap;}
+.map_mark .map_num{
+	position:absolute;top:0;left:0;width:33px;height:43px;font-size:16px;text-align:center;line-height:32px;color:#fff;font-weight:bold;z-index:3;
+	background: url(//pic.c-ctrip.com/hotels121118/un_map_spot3.png) no-repeat;
+	_background: url(//pic.c-ctrip.com/hotels121118/un_map_spot3_ie6.png) no-repeat;
+}
+.map_mark .map_mark_inner{
+	background-color:#fff;height:29px;line-height:29px;padding:0 10px 0 14px;
+	border:1px solid #A1A19D;border-left:0 none;border-top-right-radius:13px;border-bottom-right-radius:13px;box-shadow:2px 2px 2px 0 #ccc;
+	position:relative;z-index:2;left:-10px;*display:inline;_display:inline;zoom:1;
+}
+:root .map_mark .map_mark_inner { border:0 none; }
+.map_mark .map_mark_name, .map_mark .map_mark_price { display:inline-block; white-space:nowrap; }
+.map_mark .map_mark_name { max-width:70px; *width:70px; _width:70px; color:#06c; overflow:hidden; text-overflow:ellipsis; vertical-align:top; *vertical-align:; }
+.map_mark .map_mark_price dfn{margin-right:5px;}
+.map_mark .map_mark_price .b{color:#FD7917;font-weight:bold;font-family:tahoma;font-size:14px;}
+
+.map_mark_select .map_num,
+.map_mark_hover .map_num{background-position:0 -45px;}
+.map_mark_select .map_mark_inner,
+.map_mark_hover .map_mark_inner{background-color:#fffac5;}
+
+/* detail map mark */
+.detail_map_mark{padding-left:33px;padding-top:5px;height:42px;overflow:hidden;cursor:default;white-space:nowrap;}
+.detail_map_mark .ico_mark { 
+	position:absolute;top:0;left:0;width:33px;height:47px;z-index:3;
+	background: url(//pic.c-ctrip.com/hotels121118/un_map_spot3.png) no-repeat 0 -314px;
+	_background: url(//pic.c-ctrip.com/hotels121118/un_map_spot3_ie6.png) no-repeat 0 -314px;
+}
+.detail_map_mark .map_mark_inner{
+	background-color:#fff;height:29px;line-height:29px;padding:0 10px 0 14px;
+	border:1px solid #A1A19D;border-left:0 none;border-top-right-radius:13px;border-bottom-right-radius:13px;box-shadow:2px 2px 2px 0 #ccc;
+	position:relative;z-index:2;left:-10px;*display:inline;_display:inline;zoom:1;
+}
+:root .detail_map_mark .map_mark_inner { border:0 none; }
+.detail_map_mark .map_mark_name, .detail_map_mark .map_mark_price { display:inline-block; white-space:nowrap; }
+.detail_map_mark .map_mark_name { color:#06c; }
+.detail_map_mark .map_mark_price dfn{margin-right:5px;}
+.detail_map_mark .map_mark_price .b{color:#FD7917;font-weight:bold;font-family:tahoma;}
+
+.htl_pointer { display:block; width:33px; height:47px; background:url(//pic.c-ctrip.com/hotels121118/un_map_spot3.png) no-repeat 0 -314px; _background:url(//pic.c-ctrip.com/hotels121118/un_map_spot3_ie6.png) no-repeat 0 -314px; }
+.spot_htl, .spot_htl_hover { width:23px; height:30px; background:url(//pic.c-ctrip.com/hotels121118/un_map_spot3.png) no-repeat 0 -190px; _background:url(//pic.c-ctrip.com/hotels121118/un_map_spot3_ie6.png) no-repeat 0 -190px; cursor:pointer; }
+.spot_htl_hover { background-position:0 -222px; }
+
+/*--- landmark pop ---*/
+.landmark_pop{width:33px;height:47px;white-space:nowrap;}
+.landmark_pop .landmark_pop_cont{position:absolute;display:block;height:18px;margin:-22px 0 0 -15px;background-color:#ECF4FF;border:1px solid #00A9FF;margin-bottom:1px;padding:1px 6px 1px 6px;visibility:hidden;}
+.landmark_pop .landmark_pop_cont span{color:#333;white-space:nowrap;}
+.landmark_pop .ico_spot { width:33px; height:47px; background:url(//pic.c-ctrip.com/hotels121118/un_map_spot3.png) no-repeat 0 -90px; }
+.landmark_pop_hover .ico_spot { background-position:0 -140px; }
+.landmark_pop_hover .landmark_pop_cont { visibility:visible; }
+
+.ladding_page_landmark{width:33px;height:47px;white-space:nowrap;}
+.ladding_page_landmark .landmark_pop_cont{position:absolute;display:block;height:18px;margin:-22px 0 0 -15px;background-color:#ECF4FF;border:1px solid #00A9FF;margin-bottom:1px;padding:1px 6px 1px 6px;visibility:hidden;}
+.ladding_page_landmark .landmark_pop_cont span{color:#333;white-space:nowrap;}
+.ladding_page_landmark .ico_spot { width:33px; height:47px; background:url(//pic.c-ctrip.com/hotels121118/un_map_spot3.png) no-repeat 0 -90px; }
+.ladding_page_landmark .landmark_pop_cont { visibility:visible; }
+
+/* map2.6 begin */
+.map_start, .map_end,
+.map_hotel,
+.map_restaurant,
+.map_metro,
+.map_entertainment,
+.map_sight,
+.map_market,
+.map_hover,
+.map_foot,
+.map_bus,
+.map_marker,
+.radius_choose_handle,
+.landmarks_click .landmarks_bottom .del,
+.landmarks_traffic .ico_forward,
+.landmarks_traffic .ico_back,
+.landmarks_traffic .ico_left1,
+.landmarks_traffic .ico_left2,
+.landmarks_traffic .ico_left3,
+.landmarks_traffic .ico_right1,
+.landmarks_traffic .ico_right2,
+.landmarks_traffic .ico_right3 { background-image:url(//pic.c-ctrip.com/hotels121118/detail_map/um_map_iframe.png); background-repeat:no-repeat; }
+
+.landmarks_click, .landmarks_hover{ position: relative; width: 235px; padding:6px 10px 0; border: 1px solid #09A9F3; background: #fff; line-height: 22px; color: #333;}
+.landmarks_click .landmarks_click_x{ float:right; width:18px; height:18px; font-size: 16px; line-height:18px; text-align:center; font-weight: bold; color: #ccc;}
+.landmarks_click .landmarks_click_x:hover{ text-decoration: none; color:#FFA800;}
+.landmarks_click .landmarks_name, .landmarks_hover .landmarks_name{ font-weight: bold;}
+.landmarks_click .landmarks_xz{ padding: 0 25px 0 5px;}
+.landmarks_click .landmarks_xz .score{  margin-left: 10px; display: inline-block; vertical-align: middle;}
+.landmarks_xz .score .num { font-weight:bold; }
+.landmarks_click .landmarks_distance, .landmarks_hover .landmarks_distance, .landmarks_click .landmarks_traffic {}
+.landmarks_traffic .txt_gray { color:#999; }
+.landmarks_traffic .b { font-weight:bold; }
+.landmarks_traffic .ico_forward { float:left; width:16px; height:25px; margin:6px 6px 16px 0; background-position:0 -431px; overflow:hidden; }
+.landmarks_traffic .ico_back { float:left; width:22px; height:24px; margin:6px 6px 16px 0; background-position:0 -457px; overflow:hidden; }
+.landmarks_traffic .ico_left1 { float:left; width:20px; height:25px; margin:6px 6px 16px 0; background-position:0 -483px; overflow:hidden; }
+.landmarks_traffic .ico_left2 { float:left; width:21px; height:24px; margin:6px 6px 16px 0; background-position:0 -509px; overflow:hidden; }
+.landmarks_traffic .ico_left3 { float:left; width:25px; height:24px; margin:6px 6px 16px 0; background-position:0 -535px; overflow:hidden; }
+.landmarks_traffic .ico_right1 { float:left; width:20px; height:25px; margin:6px 6px 16px 0; background-position:0 -561px; overflow:hidden; }
+.landmarks_traffic .ico_right2 { float:left; display:block; width:21px; height:24px; margin:6px 6px 16px 0; background-position:0 -587px; overflow:hidden; }
+.landmarks_traffic .ico_right3 { float:left; display:block; width:26px; height:24px; margin:6px 6px 16px 0; background-position:0 -613px; overflow:hidden; }
+.landmarks_click .landmarks_bottom{ padding:4px 10px; margin:5px -10px 0; height: 24px; border-top: 1px solid #BBE2FF;}
+.landmarks_click .landmarks_bottom .del { float:right; display:inline; width:13px; height:14px; margin-top:4px; background-position:0 -415px; overflow:hidden; }
+.landmarks_bottom .del:hover { background-position:-20px -415px;text-decoration:none; }
+.landmarks_bottom .more { float:right; }
+.landmarks_bottom .go_to { color:#ccc; }
+.landmarks_bottom .go_to a { margin:0 4px; }
+.landmarks_bottom .go_to .disabled, .landmarks_bottom .go_to .disabled:hover { color:#999; cursor:default; text-decoration:none; }
+.landmarks_click .landmarks_price{ padding: 0 5px; margin-top: -22px; text-align: right; vertical-align: bottom;}
+.landmarks_click .landmarks_price span{ font: 22px Tahoma; color: #FD7917;}
+
+.map_hotel,
+.map_restaurant,
+.map_metro,
+.map_entertainment,
+.map_sight,
+.map_market,
+.map_hover { display:block; width:24px; height:30px; font-size:14px; font-family:tahoma; font-weight:bold; color:#fff; text-align:center; line-height:20px; overflow:hidden; cursor:pointer; }
+.map_hotel { background-position:0 -90px; }
+.map_restaurant { background-position:0 -122px; }
+.map_metro { background-position:0 -154px; }
+.map_entertainment { background-position:0 -186px; }
+.map_sight { background-position:0 -218px; }
+.map_market{ background-position:0 -250px; }
+.map_hover{ background-position:0 -282px; }
+
+.metro_default,
+.metro_zhengzhou,
+.metro_changsha,
+.metro_changchun,
+.metro_hongkong,
+.metro_xian,
+.metro_wuhan,
+.metro_wuxi,
+.metro_tianjin,
+.metro_taipei,
+.metro_suzhou,
+.metro_shenyang,
+.metro_shenzhen,
+.metro_shanghai,
+.metro_qingdao,
+.metro_nanjing,
+.metro_nanchang,
+.metro_kunming,
+.metro_hangzhou,
+.metro_harbin,
+.metro_guangzhou,
+.metro_dalian,
+.metro_chengdu,
+.metro_beijing,
+.metro_fuzhou { display:block; width:25px; height:25px; overflow:hidden; }
+.metro_default { background:url(//pic.c-ctrip.com/hotels121118/detail_map/metro_default.png) no-repeat; }
+.metro_zhengzhou { background:url(//pic.c-ctrip.com/hotels121118/detail_map/metro_zhengzhou.png) no-repeat; }
+.metro_changsha { background:url(//pic.c-ctrip.com/hotels121118/detail_map/metro_changsha.png) no-repeat; }
+.metro_changchun { background:url(//pic.c-ctrip.com/hotels121118/detail_map/metro_changchun.png) no-repeat; }
+.metro_hongkong { background:url(//pic.c-ctrip.com/hotels121118/detail_map/metro_hongkong.png) no-repeat; }
+.metro_xian { background:url(//pic.c-ctrip.com/hotels121118/detail_map/metro_xian.png) no-repeat; }
+.metro_wuhan { background:url(//pic.c-ctrip.com/hotels121118/detail_map/metro_wuhan.png) no-repeat; }
+.metro_wuxi { background:url(//pic.c-ctrip.com/hotels121118/detail_map/metro_wuxi.png) no-repeat; }
+.metro_tianjin { background:url(//pic.c-ctrip.com/hotels121118/detail_map/metro_tianjin.png) no-repeat; }
+.metro_taipei { background:url(//pic.c-ctrip.com/hotels121118/detail_map/metro_taipei.png) no-repeat; }
+.metro_suzhou { background:url(//pic.c-ctrip.com/hotels121118/detail_map/metro_suzhou.png) no-repeat; }
+.metro_shenyang { background:url(//pic.c-ctrip.com/hotels121118/detail_map/metro_shenyang.png) no-repeat; }
+.metro_shenzhen { background:url(//pic.c-ctrip.com/hotels121118/detail_map/metro_shenzhen.png) no-repeat; }
+.metro_shanghai { background:url(//pic.c-ctrip.com/hotels121118/detail_map/metro_shanghai.png) no-repeat; }
+.metro_qingdao { background:url(//pic.c-ctrip.com/hotels121118/detail_map/metro_qingdao.png) no-repeat; }
+.metro_nanjing { background:url(//pic.c-ctrip.com/hotels121118/detail_map/metro_nanjing.png) no-repeat; }
+.metro_nanchang { background:url(//pic.c-ctrip.com/hotels121118/detail_map/metro_nanchang.png) no-repeat; }
+.metro_kunming { background:url(//pic.c-ctrip.com/hotels121118/detail_map/metro_kunming.png) no-repeat; }
+.metro_hangzhou { background:url(//pic.c-ctrip.com/hotels121118/detail_map/metro_hangzhou.png) no-repeat; }
+.metro_harbin { background:url(//pic.c-ctrip.com/hotels121118/detail_map/metro_harbin.png) no-repeat; }
+.metro_guangzhou { background:url(//pic.c-ctrip.com/hotels121118/detail_map/metro_guangzhou.png) no-repeat; }
+.metro_dalian { background:url(//pic.c-ctrip.com/hotels121118/detail_map/metro_dalian.png) no-repeat; }
+.metro_chengdu { background:url(//pic.c-ctrip.com/hotels121118/detail_map/metro_chengdu.png) no-repeat; }
+.metro_beijing { background:url(//pic.c-ctrip.com/hotels121118/detail_map/metro_beijing.png) no-repeat; }
+.metro_fuzhou { background:url(//pic.c-ctrip.com/hotels121118/detail_map/metro_fuzhou.png) no-repeat; }
+
+.map_start,
+.map_end { display:block; width:33px; height:43px; overflow:hidden; }
+.map_start { background-position:0 0; }
+.map_end { background-position:0 -45px; }
+.map_marker { display:block; width:17px; height:28px; background-position:0 -368px; overflow:hidden; }
+.map_foot,
+.map_bus { display:block; width:25px; height:25px; overflow:hidden; }
+.map_foot { background-position:0 -314px; }
+.map_bus { background-position:0 -341px; }
+.radius_choose_handle { display:block; width:15px; height:15px; background-position:0 -398px; overflow:hidden; }
+.radius_choose_handle:hover { background-position:-18px -398px; }
+
+.radius_choose_box { width:172px; padding:10px; border:1px solid #ADADAD; background-color:#fff; background-color:rgba(255, 255, 255, 0.8); }
+.radius_choose_box .close { float:right; width:18px; height:18px; font-size: 16px; line-height:18px; text-align:center; font-weight: bold; color: #ccc;}
+.radius_choose_box .close:hover { text-decoration: none; color:#FFA800;}
+.radius_choose_box .p { color:#666; }
+.radius_choose_box .distance { font-weight:bold; color:#333; }
+.radius_choose_box .distance input { width:60px; border:none; font-weight:bold; color:#333; font-family:tahoma; }
+.radius_choose_box .radius_choose { height:58px; margin-top:6px; *zoom:1; }
+.radius_choose_box .radius_choose:after { clear:both; content:'.'; display:block; height:0; overflow:hidden; }
+.radius_choose_box .radius_choose a { float:left; width:78px; height:22px; margin:0 5px 5px 0; border:1px solid #ADADAD; background-color:#fff; line-height:22px; text-align:center; color:#333; overflow:hidden; }
+.radius_choose_box .radius_choose a:hover, .radius_choose_box .radius_choose .selected { border-color:#2577E3; background-color:#2577E3; color:#fff; text-decoration:none; }
+
+
+/* map2.6 end */
+
+/* shangyequ map begin */
+.shangyequ_map_mark{padding-left:24px;padding-top:2px;height:30px;overflow:hidden;cursor:default;white-space:nowrap;cursor:pointer;}
+.shangyequ_map_mark .ico_mark { 
+	position:absolute;top:0;left:0;width:24px;height:30px;z-index:3;
+	background: url(//pic.c-ctrip.com/hotels121118/un_map_spot3.png) no-repeat 0 -363px;
+	_background: url(//pic.c-ctrip.com/hotels121118/un_map_spot3_ie6.png) no-repeat 0 -363px;
+}
+.shangyequ_map_mark .map_mark_inner{
+	background-color:#fff;height:22px;line-height:22px;padding:0 10px 0 18px;
+	border:1px solid #A1A19D;border-left:0 none;border-top-right-radius:13px;border-bottom-right-radius:13px;box-shadow:2px 2px 2px 0 #ccc;
+	position:relative;z-index:2;left:-10px;*display:inline;_display:inline;zoom:1;
+}
+:root .shangyequ_map_mark .map_mark_inner { border:0 none; }
+.shangyequ_map_mark .map_mark_name, .shangyequ_map_mark .map_mark_price { display:inline-block; *display: inline; white-space:nowrap; }
+.shangyequ_map_mark .map_mark_name { color:#06c; }
+.shangyequ_map_mark .map_mark_price dfn{margin-right:5px;}
+.shangyequ_map_mark .map_mark_price .b{color:#FD7917;font-weight:bold;font-family:tahoma;}
+.shangyequ_map_mark_hover .ico_mark { background-position:0 -395px; }
+.shangyequ_map_mark_hover .map_mark_inner { background-color:#fffbc2; }
+
+.shangyequ_pop { width:330px; padding:10px; border:1px solid #09A9F3; background-color:#fff; }
+.shangyequ_pop .txt { margin-bottom:10px; }
+.shangyequ_pop .num { font-weight:bold; }
+
+
+/* shangyequ map end */

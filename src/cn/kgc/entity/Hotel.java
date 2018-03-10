@@ -1,18 +1,49 @@
 package cn.kgc.entity;
 
 import java.io.Serializable;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * @author YJM
  * @since trip1.0
  * 酒店类
  */
+
 public class Hotel implements Serializable{
 
     private int hid;
     private String hname;
-    private String htype;
-    private String hlevel;
-    private String hcount;
+    private String htype;//酒店类型
+    private String hlevel;//酒店星级
+    private String hcount;//是否打折
+private String haddress;
+
+    private List<String> hlevels;
+    private List<String> htypes;
+
+    public String getHaddress() {
+        return haddress;
+    }
+
+    public void setHaddress(String haddress) {
+        this.haddress = haddress;
+    }
+    public List<String> getHlevels() {
+        return hlevels;
+    }
+
+    public void setHlevels(List<String> hlevels) {
+        this.hlevels = hlevels;
+    }
+
+    public List<String> getHtypes() {
+        return htypes;
+    }
+
+    public void setHtypes(List<String> htypes) {
+        this.htypes = htypes;
+    }
 
     public int getHid() {
         return hid;
@@ -62,6 +93,8 @@ public class Hotel implements Serializable{
                 ", htype='" + htype + '\'' +
                 ", hlevel='" + hlevel + '\'' +
                 ", hcount='" + hcount + '\'' +
+                ", hlevels=" + hlevels +
+                ", htypes=" + htypes +
                 '}';
     }
 }

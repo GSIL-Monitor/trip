@@ -3,5 +3,41 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.kgc.dao.HotelMapper">
+<resultMap id="HotelBean" type="Hotel">
+    <id column="hid" property="hid"></id>
+    <result property="hname" column="hname"/>
+    <result property="htype" column="htype"/>
+    <result property="hlevel" column="hlevel"/>
+    <result property="hcount" column="hcount"/>
+    <result property="haddress" column="haddress"/>
+</resultMap>
 
+    <select id="selectAll" resultMap="HotelBean">
+        SELECT * FROM hotel;
+    </select>
+
+    <select id="selectPage"  resultMap="HotelBean">
+        SELECT * FROM hotel limit #{index},#{pageSize};
+    </select>
+
+    <select id="selectByChoose"  resultMap="HotelBean">
+        SELECT * FROM hotel AS h
+        <where>
+            <if test="hotel.hlevel!=1">
+                AND h.hlevel IN
+                <foreach collection="hotel.hlevels" item="level" open="(" separator="," close=")">
+                    #{level}
+                </foreach>
+            </if>
+            <if test="hotel.hname !=null and hotel.hlevels !=''">
+                AND  h.hname LIKE concat('%',#{hotel.hname},'%')
+
+            </if>
+            <if test="hotel.haddress !=null and hotel.hlevels !=''">
+                AND  h.haddress LIKE concat('%',#{hotel.haddress},'%')
+
+            </if>
+        </where>
+
+    </select>
 </mapper>

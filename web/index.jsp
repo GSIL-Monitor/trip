@@ -11,6 +11,6 @@
     <title>$Title$</title>
   </head>
   <body>
-<a href="/shows/face" >enter</a>
+<a href="/hotelController/face" >enter</a>
   </body>
 </html>
